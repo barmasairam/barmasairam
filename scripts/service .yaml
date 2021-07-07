@@ -1,0 +1,13 @@
+apiversion: v1
+kind: service
+metadata:
+  name: app1-svc
+  namespace: app1
+spec:
+  selector:
+  app: nginx-deployment
+ports:
+  - protocol: tcp
+    port: 80
+    targetport: 80
+type: loadbalancer
